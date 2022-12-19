@@ -1,0 +1,11 @@
+version: "1"
+project:
+  id: ""
+packages:
+  - path: "./app/datastore/credit"
+    engine: "postgresql"
+    schema: "./db/credit/migrations"
+    queries: "./db/credit/queries.sql"
+    emit_result_struct_pointers: true
+    emit_params_struct_pointers: true
+    sql_package: "pgx/v4"

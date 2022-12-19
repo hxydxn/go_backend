@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+option go_package = "app/api/credit";
+
+package credit;
+
+service Credit {
+    rpc Credit(CreditRequest) returns (CreditResponse) {}
+}
+
+message CreditRequest{
+    uint32 ssrn = 1;
+}
+
+message CreditResponse{
+    string project_id = 1;
+    string standard = 2;
+    string methodology = 3;
+    string region = 4;
+    string storage_method = 5;
+    string method = 6;
+    string emission_type = 7;
+    string category = 8;
+    string uri = 9;
+    string beneficiary = 10;
+}
